@@ -8,9 +8,44 @@ body{
 .grid-container{
   display: grid;
   grid-template-columns: 260px 1fr 1fr 1fr;
-  /* grid-template-rows: 0.2fr 3fr; */
-  /* grid-template-areas: 
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: 
             'sidebar header header header'
-            'sidebar main main main'; */
-  /* height: 100vh; */
+            'sidebar main main main';
+  height: 100vh;
+}
+
+.header{
+  grid-area: header;
+  height: 60px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px ;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.684);
+}
+.menu-icons{
+  display: none;
+}
+
+
+
+#sidebar{
+  grid-area: sidebar;
+  height: 100%;
+  background-color: rgba(58, 58, 159, 0.874);
+  overflow-y: auto;
+  transition: all 05.s;
+  -webkit-transition: all 05.s  ;  
+}
+
+.sidebar-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0 30px;
+  margin-bottom: 30px;
+}
+.sidebar-tilte >span{
+  display: none;
 }
