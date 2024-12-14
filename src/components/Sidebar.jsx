@@ -1,14 +1,14 @@
 import React from 'react'
 import {BsCart3, BsFillArchiveFill, BsFillGearFill, BsFillGrid3X3GapFill, BsGrid1X2Fill, BsListCheck, BsMenuButtonWideFill, BsPeopleFill } from 'react-icons/bs'
 
-function Sidebar() {
+function Sidebar( openSidebarToggle, OpenSidebar) {
   return (
-    <aside id='sidebar'>
+    <aside id='sidebar' className={openSidebarToggle ? "sidebar-responsive ": ""}>
       <div className='sidebar-title'>
-        <div className='sidebar-brand'>
-        <BsCart3 className='icon-header'/>SHOP
-        </div>
-        <span className='icon close_icon'>X</span>
+            <div className='sidebar-brand'>
+            <BsCart3 className='icon-header'/>SHOP
+            </div>
+        <span className='icon close_icon' onClick={OpenSidebar}>X</span>
       </div>
 
       <ul className='sidebar-list'>
